@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
+import * as API from './services/api';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+export function App() {
+  const [launches, setLaunches] = useState([]);
+  
+  useEffect(() => { 
+    API.getLaunches().then(data => setLaunches(data));
+  }, []);
+
+  return  (
+  <>
+    <h1>SpaceX Launches</h1>
+    <ul>
+      {launches.map(launch => (
+        <li>
+            key={launch.flight_number}
+            <h2>{launch.mission_name} ({launch.launch_year})</h2>
+            
+        </li>
+        ))}
+    </ul>
+  </>
   );
 }
 
