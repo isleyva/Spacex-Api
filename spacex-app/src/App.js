@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import {Box, Heading, Image} from '@chakra-ui/react';
+import {Box, Heading, Image, Flex, Text, Spacer, Tag } from '@chakra-ui/react';
 import logo from "./assets/logo-spacex.png";
 import * as API from './services/api';
 
@@ -25,6 +25,16 @@ export function App() {
         m={4} 
         borderRadius="lg"
         >
+          <Flex display="flex">
+            <Text fontSize="2xl">
+              Mission <strong>{launch.mission_name}</strong> 
+              ({launch.launch_year})
+            </Text>
+          <Spacer/>
+          <Tag p={4} colorScheme="green">
+            Success
+          </Tag>
+          </Flex>
             {launch.mission_name} ({launch.launch_year})   
         </Box>
         ))}
