@@ -31,8 +31,8 @@ export function App() {
               ({launch.launch_year})
             </Text>
           <Spacer/>
-          <Tag p={4} colorScheme="green">
-            Success
+          <Tag p={4} colorScheme={launch.launch_success ? 'green' : 'red'}>
+            {launch.launch_success ? 'Success' : 'Failed'}
           </Tag>
           </Flex>
             {launch.mission_name} ({launch.launch_year})   
