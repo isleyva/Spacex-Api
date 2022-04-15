@@ -12,7 +12,7 @@ export function App() {
 
   return  (
   <>
-    <img src={logo} alt="SpaceX" />
+    <img src={logo} width={350} alt="SpaceX" />
     <h1>SpaceX Launches</h1>
     <ul>
       {launches.map(launch => (
