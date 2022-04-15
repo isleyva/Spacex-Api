@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import {Box, Heading} from '@chakra-ui/react';
+import {Box, Heading, Image} from '@chakra-ui/react';
 import logo from "./assets/logo-spacex.png";
 import * as API from './services/api';
 
@@ -13,7 +13,7 @@ export function App() {
 
   return  (
   <>
-    <img src={logo} width={350} alt="SpaceX" />
+    <Image m={4} src={logo} width={350} alt="SpaceX" />
     <Heading as="h1" size="lg" m={4}>
       SpaceX Launches
     </Heading>
