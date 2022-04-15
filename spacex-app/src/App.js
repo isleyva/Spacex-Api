@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import {Heading} from '@chakra-ui/react';
+import {Box, Heading} from '@chakra-ui/react';
 import logo from "./assets/logo-spacex.png";
 import * as API from './services/api';
 
@@ -17,14 +17,18 @@ export function App() {
     <Heading as="h1" size="lg">
       SpaceX Launches
     </Heading>
-    <ul>
+    <section>
       {launches.map(launch => (
-        <li key={launch.flight_number}>
-            {launch.mission_name} ({launch.launch_year})
-            
-        </li>
+        <Box key={launch.flight_number} 
+        bg="gray.100" 
+        p={4} 
+        m={4} 
+        borderRadius="lg"
+        >
+            {launch.mission_name} ({launch.launch_year})   
+        </Box>
         ))}
-    </ul>
+    </section>
   </>
   );
 }
