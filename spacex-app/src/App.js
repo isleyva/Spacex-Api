@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import logo from "./assets/logo-spacex.png";
 import * as API from './services/api';
 
 
@@ -11,6 +12,7 @@ export function App() {
 
   return  (
   <>
+    <img src={logo} alt="SpaceX" />
     <h1>SpaceX Launches</h1>
     <ul>
       {launches.map(launch => (
