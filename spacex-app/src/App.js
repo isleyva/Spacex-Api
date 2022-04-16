@@ -38,7 +38,8 @@ export function App() {
           </Flex> 
           <Flex align="center">
             <HiCalendar/>
-            <Text fontSize="sm">{launch.launch_date_local}</Text>
+            {" "}
+            <Text fontSize="sm" ml={2}>{launch.launch_date_local}</Text>
           </Flex>  
         </Box>
         ))}
