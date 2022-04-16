@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import {Box, Heading, Image, Flex, Text, Spacer, Tag } from '@chakra-ui/react';
 import logo from "./assets/logo-spacex.png";
 import * as API from './services/api';
+import {HiCalendar} from 'react-icons/hi';
 
 
 export function App() {
@@ -28,14 +29,17 @@ export function App() {
           <Flex display="flex">
             <Text fontSize="2xl">
               Mission <strong>{launch.mission_name}</strong> 
-              ({launch.launch_year})
+               ({launch.launch_year})
             </Text>
           <Spacer/>
           <Tag p={4} colorScheme={launch.launch_success ? 'green' : 'red'}>
             {launch.launch_success ? 'Success' : 'Failed'}
           </Tag>
-          </Flex>
-            {launch.mission_name} ({launch.launch_year})   
+          </Flex> 
+          <Flex align="center">
+            <HiCalendar/>
+            <Text fontSize="sm">{launch.launch_date_local}</Text>
+          </Flex>  
         </Box>
         ))}
     </section>
