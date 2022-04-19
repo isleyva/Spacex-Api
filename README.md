@@ -36,7 +36,8 @@ https://create-react-app.dev/
 
 One of most intersting things: I´ts deployed by vercel, I recomend their documentation for do it.
 
-I invite you to do a code review to improve and add good practices. I hope you like it and that if you do a similar project that you enjoy the process.
+------------------
 
+I invite you to do a code review to improve and add good practices. I hope you like it and that if you do a similar project that you enjoy the process.
 Greetings and thank you for your time.
 
